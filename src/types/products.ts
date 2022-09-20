@@ -1,5 +1,25 @@
 export interface ProductsState {
-  data: any[];
+  data: [
+    {
+      id: number,
+      imageUrl: string,
+      name: string,
+      count: number,
+      size: {
+        width: number,
+        height: number
+      },
+      weight: string,
+      comments: [
+        {
+          id: number,
+          productId: number,
+          description: string,
+          date: string
+        }
+      ]
+    }
+  ] | [];
   loading: boolean;
   error: null | string;
 }
@@ -16,23 +36,25 @@ interface GetProductsAction {
 interface GetProductsActionSuccess {
   type: ProductsAcrionTypes.GET_PRODUCTS_SUCCESS;
   payload: [
-    id: number,
-    imageUrl: string,
-    name: string,
-    count: number,
-    size: {
-      width: number,
-      height: number
-    },
-    weight: string,
-    comments: [
-      {
-        id: number,
-        productId: number,
-        description: string,
-        date: string
-      }
-    ]
+    {
+      id: number,
+      imageUrl: string,
+      name: string,
+      count: number,
+      size: {
+        width: number,
+        height: number
+      },
+      weight: string,
+      comments: [
+        {
+          id: number,
+          productId: number,
+          description: string,
+          date: string
+        }
+      ]
+    }
   ]
 }
 

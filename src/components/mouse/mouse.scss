@@ -1,0 +1,46 @@
+.mouse {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    height: 600px;
+    width: auto;
+  }
+
+  &__info {
+    padding: 0 50px;
+
+    &-name {
+      margin-bottom: 10px;
+
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    &-size, &-weight, &-count {
+      margin-bottom: 5px;
+
+      font-size: 18px;
+      font-weight: 400;
+      color: #808080;
+
+      :last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+
+      font-weight: 700;
+      font-size: 24px;
+      color: #0026ff;
+
+      transition-duration: 0.5s;
+
+      &:hover {
+        color: #011069;
+      }
+    }
+  }
+}
