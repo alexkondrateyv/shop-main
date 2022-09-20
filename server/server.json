@@ -1,0 +1,186 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://www.datart.cz/foto/500/5/6/9/product_3576965.jpg",
+      "name": "HyperX Pulsefire Surge",
+      "count": 5,
+      "size": {
+      "width": 191,
+      "height": 65
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 1,
+          "description": "It works well BUT it has been advertised twice in 6 months.",
+          "date": "16:00 09.12.2021"
+        },
+        {
+          "id": 2,
+          "productId": 1,
+          "description": "Good mouse",
+          "date": "14:30 21.08.2022"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://www.datart.cz/foto/500/2/4/7/product_4238742.jpg",
+      "name": "Logitech Gaming G102 Lightsync",
+      "count": 2,
+      "size": {
+      "width": 160,
+      "height": 50
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 2,
+          "description": "No problem. Easy to fit to the hand, sensitive, nice, especially has a quick response to tasks. The only thing I would criticize is the shape, it is smaller than I was used to, however this is only a slight detail.",
+          "date": "16:00 09.12.2021"
+        },
+        {
+          "id": 2,
+          "productId": 2,
+          "description": "very satisfied",
+          "date": "14:30 21.08.2022"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://www.datart.cz/foto/500/4/6/5/product_4465564.jpg",
+      "name": "HyperX Pulsefire Haste",
+      "count": 8,
+      "size": {
+      "width": 193,
+      "height": 65
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 3,
+          "description": "the mouse stopped working after 14 days of use, I am now dealing with a complaint",
+          "date": "16:00 09.12.2021"
+        },
+        {
+          "id": 2,
+          "productId": 3,
+          "description": "Satisfaction",
+          "date": "14:30 21.08.2022"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://www.datart.cz/foto/500/0/8/9/product_4791980.jpg",
+      "name": "Razer DeathAdder Essential",
+      "count": 6,
+      "size": {
+      "width": 109,
+      "height": 55
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 4,
+          "description": "I am satisfied",
+          "date": "16:00 09.12.2021"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://www.datart.cz/foto/500/9/2/2/product_4024229.jpg",
+      "name": "Razer Basilisk Ultimate",
+      "count": 1,
+      "size": {
+      "width": 212,
+      "height": 160
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 5,
+          "description": "The box came a little dirty, but otherwise everything works as it should, it's a great mouse",
+          "date": "16:00 09.12.2021"
+        },
+        {
+          "id": 2,
+          "productId": 5,
+          "description": "Advantage is the rechargeable dock",
+          "date": "14:30 21.08.2022"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://www.datart.cz/foto/500/0/2/0/product_4176020.jpg",
+      "name": "HyperX Pulsefire Raid",
+      "count": 4,
+      "size": {
+      "width": 189,
+      "height": 60
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 6,
+          "description": "The cape is great. Professional service. Sellers understand their work and give good advice. For me 100 /100.",
+          "date": "16:00 09.12.2021"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://www.datart.cz/foto/500/1/9/5/product_4733591.jpg",
+      "name": "SteelSeries Rival 5",
+      "count": 7,
+      "size": {
+      "width": 198,
+      "height": 50
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 7,
+          "description": "Great mouse for the money. Very good ergonomics, fine-tuned program with support for all sorts of settings that does not overload the system. I definitely recommend it.",
+          "date": "16:00 09.12.2021"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://www.datart.cz/foto/500/3/8/6/product_4733683.jpg",
+      "name": "SteelSeries Sensei Ten",
+      "count": 5,
+      "size": {
+      "width": 205,
+      "height": 65
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 8,
+          "description": "My son is completely satisfied",
+          "date": "16:00 09.12.2021"
+        },
+        {
+          "id": 2,
+          "productId": 8,
+          "description": "Satisfaction on games is perfect, I would hardly look for better.",
+          "date": "14:30 21.08.2022"
+        }
+      ]
+    }
+  ]
+}

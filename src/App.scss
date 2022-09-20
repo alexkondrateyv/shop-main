@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Mukta-Regular.woff2) format('woff2'),
+    url(./fonts/Mukta-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./fonts/Mukta-Bold.woff2) format('woff2'),
+    url(./fonts/Mukta-Bold.woff) format('woff');
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mukta', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1320px;
+  min-width: 375px;
+
+  padding: 0 20px;
+}
