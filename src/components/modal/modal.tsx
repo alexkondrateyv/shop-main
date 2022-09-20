@@ -1,12 +1,12 @@
 import React from 'react';
 
-import axios from 'axios';
 import { Field, Form, Formik, FormikHelpers } from 'formik';
 
 import { BASE_URL } from '../../constants/URL';
 import { useActions } from '../../hooks/useAction';
 import { IProduct } from '../../types/product';
 
+import { axiosPost } from '../../services/axios';
 import './modal.scss';
 
 export const Modal: React.FC = () => {
@@ -28,7 +28,7 @@ export const Modal: React.FC = () => {
           values: IProduct,
           { setSubmitting }: FormikHelpers<IProduct>
         ) => {
-          axios.post(BASE_URL, {
+          axiosPost(BASE_URL, {
             imageUrl: values.imageUrl,
             name: values.name,
             count: +values.count,
@@ -39,12 +39,10 @@ export const Modal: React.FC = () => {
             weight: values.weight,
             comments: []
           })
-            .then(resp => {
-              console.log(resp.data);
-            }).catch(error => {
-              console.log(error);
-            });
-          setTimeout(() => fetchProducts('/'), 500)
+          setTimeout(() => {
+            fetchProducts('/');
+            turnOffModal()
+          }, 500)
           setSubmitting(false);
         }}
       >
