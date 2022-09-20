@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
 import { ROUTES } from '../../constants/routes';
+import { filter } from '../../services/filter';
 
 import './list.scss';
 
-import { useActions } from '../../hooks/useAction';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 export const List: React.FC = () => {
   const { data, error, loading } = useTypedSelector(state => state.products);
+  const { value } = useTypedSelector(state => state.search)
 
-  const { fetchProducts } = useActions()
-
-  useEffect(() => {
-    fetchProducts()
-  }, [])
+  const filteredProducts = filter(data, value, 'name');
 
   if (loading) {
     return (
@@ -33,7 +31,7 @@ export const List: React.FC = () => {
 
   return (
     <div className="list">
-      {data.map(product =>
+      {filteredProducts.map(product =>
         <div key={product.id} className="list__product">
           <div className="list__product-box">
             <img src={product.imageUrl} alt="image" className="list__product-box-img" />
@@ -44,6 +42,7 @@ export const List: React.FC = () => {
                 href={ROUTES.product}
                 className="list__product-box-link"
                 target="_blank"
+                onClick={() => console.log(1)}
               >More info</a>
             </div>
           </div>
