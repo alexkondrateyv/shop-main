@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
+import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes';
+import { useActions } from '../../hooks/useAction';
 import { filter } from '../../services/filter';
 
 import './list.scss';
@@ -9,9 +11,15 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 export const List: React.FC = () => {
   const { data, error, loading } = useTypedSelector(state => state.products);
-  const { value } = useTypedSelector(state => state.search)
+  const { value } = useTypedSelector(state => state.search);
+
+  const { fetchProducts } = useActions();
 
   const filteredProducts = filter(data, value, 'name');
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
   if (loading) {
     return (
@@ -31,20 +39,19 @@ export const List: React.FC = () => {
 
   return (
     <div className="list">
-      {filteredProducts.map(product =>
-        <div key={product.id} className="list__product">
+      {filteredProducts.map(elem =>
+        <div key={elem.id} className="list__product">
           <div className="list__product-box">
-            <img src={product.imageUrl} alt="image" className="list__product-box-img" />
-            <p className="list__product-box-name">{product.name}</p>
-            <p className="list__product-box-count">count: {product.count}</p>
-            <div>
-              <a
-                href={ROUTES.product}
-                className="list__product-box-link"
-                target="_blank"
-                onClick={() => console.log(1)}
-              >More info</a>
-            </div>
+            <img src={elem.imageUrl} alt="image" className="list__product-box-img" />
+            <p className="list__product-box-name">{elem.name}</p>
+            <p className="list__product-box-count">count: {elem.count}</p>
+            <Link
+              to={`${ROUTES.product}/${elem.id}`}
+              onClick={() => {
+                fetchProducts(`?id=${elem.id}`)
+              }}>
+              More info
+            </Link>
           </div>
         </div>
       )}

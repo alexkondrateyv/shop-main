@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Header } from '../../components/header/header';
-import { Search } from '../../components/search/search';
 import { List } from '../../components/list/list';
+import { Search } from '../../components/search/search';
 
 import './main.scss';
 
