@@ -46,6 +46,7 @@ export const List: React.FC = () => {
             <p className="list__product-box-name">{elem.name}</p>
             <p className="list__product-box-count">count: {elem.count}</p>
             <Link
+              className="list__product-box-link"
               to={`${ROUTES.product}/${elem.id}`}
               onClick={() => {
                 fetchProducts(`?id=${elem.id}`)
